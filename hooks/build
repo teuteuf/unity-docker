@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+
+if [[ ${IMAGE_NAME} = *"WebGL"* ]]; then
+    docker build --build-arg=COMPONENTS="Unity,WebGL" -t ${IMAGE_NAME} .
+elif [[ ${IMAGE_NAME} = *"Windows"* ]]; then
+    docker build --build-arg=COMPONENTS="Unity,Windows,Windows-Mono" -t ${IMAGE_NAME} .
+elif [[ ${IMAGE_NAME} = *"Mac"* ]]; then
+    docker build --build-arg=COMPONENTS="Unity,Mac,Mac-Mono" -t ${IMAGE_NAME} .
+elif [[ ${IMAGE_NAME} = *"iOS"* ]]; then
+    docker build --build-arg=COMPONENTS="Unity,iOS" -t ${IMAGE_NAME} .
+elif [[ ${IMAGE_NAME} = *"Android"* ]]; then
+    docker build --build-arg=COMPONENTS="Unity,Android" -t ${IMAGE_NAME} .
+else
+    docker build -t ${IMAGE_NAME} .
+fi

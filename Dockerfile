@@ -2,7 +2,7 @@ FROM ubuntu:16.04
 
 ENV DOWNLOAD_URL="https://beta.unity3d.com/download/793261fe3e9a/UnitySetup-2018.2.6f1"
 ENV SHA1="0358da6c5dcd1746de4ac293ffc405cb455b1493"
-ARG COMPONENTS="Unity,Windows,Windows-Mono,Mac,Mac-Mono,WebGL,Android,iOS"
+ARG COMPONENTS="Unity"
 
 RUN apt-get update -qq; \
     apt-get install -qq -y \
