@@ -1,7 +1,7 @@
 FROM ubuntu:16.04
 
-ENV DOWNLOAD_URL="https://beta.unity3d.com/download/dad990bf2728/UnitySetup-2018.2.7f1"
-ENV SHA1="13c24c5268a1a97e1e212321dc47a8890f0934ca"
+ENV DOWNLOAD_URL="https://beta.unity3d.com/download/6e9a27477296/UnitySetup-2018.3.0f2"
+ENV SHA1="0540e0a57293e41548a0306108aae8beababc0ee"
 ARG COMPONENTS="Unity"
 
 RUN apt-get update -qq; \
