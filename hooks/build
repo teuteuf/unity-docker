@@ -10,6 +10,8 @@ elif [[ ${IMAGE_NAME} = *"iOS"* ]]; then
     docker build --build-arg=COMPONENTS="Unity,iOS" -t ${IMAGE_NAME} .
 elif [[ ${IMAGE_NAME} = *"Android"* ]]; then
     docker build --build-arg=COMPONENTS="Unity,Android" -t ${IMAGE_NAME} .
+elif [[ ${IMAGE_NAME} = *"Full"* ]]; then
+    docker build --build-arg=COMPONENTS="Unity,WebGL,Windows,Windows-Mono,Mac,Mac-Mono,iOS,Android" -t ${IMAGE_NAME} .
 else
     docker build -t ${IMAGE_NAME} .
 fi
